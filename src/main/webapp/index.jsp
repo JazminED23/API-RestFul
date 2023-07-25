@@ -8,6 +8,6 @@
 <h1><%= "ALUMNOS" %>
 </h1>
 <br/>
-<a href="alumnos">Click me!</a>
+<a href="alumnos/all">Click me!</a>
 </body>
 </html>
