@@ -1,7 +1,7 @@
-package controllers;
+package Alumno.controllers;
 
-import com.models.User;
-import com.services.UserService;
+import Alumno.models.Alumno;
+import Alumno.services.AlumnoService;
 import jakarta.inject.Inject;
 import jakarta.json.Json;
 import jakarta.json.JsonArray;
@@ -10,18 +10,19 @@ import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 
-@Path("/users")
-public class UserController {
+@Path("/alumnos")
+public class AlumnoController {
     @Inject
-    private UserService userService;
+    private AlumnoService alumnoService;
     @Path("/all")
     @GET
     @Produces("application/json")
     public JsonArray getAll(){
         JsonArrayBuilder builder = Json.createArrayBuilder();
-        for (User user: userService.getAll()){
-            builder.add(Json.createObjectBuilder().add("email",user.getEmail()));
+        for (Alumno alumno: alumnoService.getAll()){
+            builder.add(Json.createObjectBuilder().add("num_control",alumno.getNum_control()));
         }
         return builder.build();
     }
 }
+
