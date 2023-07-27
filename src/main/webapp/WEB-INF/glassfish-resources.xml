@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE>
+<resources>
+    <jdbc-connection-pool name="my_oracle_pool" res-type="javax.sql.DataSource">
+    <property name="serverName" value="localhost"/>
+        <property name="portNumber" value="1521"/>
+        <property name="databaseName" value="ESCUELA"/>
+        <property name="User" value="system"/>
+        <property name="Password" value="admin"/>
+        <property name="URL" value="jdbc:oracle:thin:@localhost:1521:XE"/>
+        <property name="driverClass" value="oracle.jdbc.OracleDriver"/>
+    </jdbc-connection-pool>
+    <jdbc-resource pool-name="my_oracle_pool" jndi-name="jdbc/myOracleDB"/>
+</resources>

@@ -1,16 +1,24 @@
 package Alumno.models;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "ALUMNOS")
+@Table(name = "alumnos")
 public class Alumno {
+    @Id
+    @Column
     private int num_control;
+    @Column
     private String nombre;
+    @Column
     private String apellido;
+    @Column
     private String correo;
+    @Column
     private String carrera;
+    @Column
     private String direccion;
 
     public Alumno(int num_control, String nombre, String apellido, String correo, String carrera, String direccion) {
@@ -22,6 +30,9 @@ public class Alumno {
         this.direccion = direccion;
     }
 
+    public Alumno() {
+
+    }
 
 
     @Id

@@ -4,6 +4,9 @@
              xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
              version="3.0">
     <persistence-unit name="default" transaction-type="JTA">
+        <jta-data-source>jdbc/myOracleDB</jta-data-source>
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+        <validation-mode>AUTO</validation-mode>
 <properties>
     <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
     <property name="javax.persistence.schema-generation.create-source" value="script"/>
